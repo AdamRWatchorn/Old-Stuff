@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  alice:
+    build: ./alice
+    image: alice
+    container_name: alice
+    networks:
+      channel:
+        ipv4_address: 10.0.0.2
+
+  mallory:
+      build: ./mallory
+      image: attacker
+      container_name: mallory
+      tty: true
+      restart: always
+      network_mode: service:alice
+
+networks:
+  channel:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/28

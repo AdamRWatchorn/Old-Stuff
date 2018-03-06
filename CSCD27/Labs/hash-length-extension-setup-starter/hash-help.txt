@@ -1,0 +1,10 @@
+# hash value received by decoding
+    print(token)
+    h = md5(state=token.decode("hex"), count=512)
+    print(h.hexdigest())
+    print(md5(KEY + message + padding((len(message) + 6)*8)).hexdigest())
+
+# hash value we get by updating
+    h.update(extension)
+    print(h.hexdigest())
+    print(md5(KEY + message + padding((len(message) + 6)*8) + extension).hexdigest())

@@ -1,0 +1,10 @@
+
+"""
+from hashlib import sha256
+
+good = "a2405517ac382b7775f5036d801888045a1deff87008943be9aebfeb0b6b9492"
+
+if(sha256(bits).hexdigest() == good):
+    print("I am good!")
+else:
+    print("I am evil!")
