@@ -1,0 +1,8 @@
+Daniel Karas Karasdan
+Gauravjeet kala kalagaur  
+Antonio Lok Chan  lokchana
+
+Problems:
+1- CP is not fully implemented. We still need to copy the data from the buffer
+to the blocks. Also, Single indirection is not set up.
+2 - For RM, single indirection is not set up.
